@@ -4,6 +4,9 @@ Ferramenta Python para análise de viabilidade energética, cruzando dados de ir
 PROJETO: CONSUMO e ENERGIA SOLAR
 Data de criação: 24/02/2025
 
+Os dados de irradiação solar são extraídos da planilha 'global_horizontal_means_RJ.csv' da LABREN, na qual filtrei 21 IDs correspondentes ao município de Itaperuna, localizado no Noroeste Fluminense. 
+Calculamos a média diária mensal sobre esses 21 pontos para obter um valor representativo da região.
+
 # Funcionalidades Principais:
 - Leitura de Irradiação Solar
   Carrega média mensal de irradiação (Wh/m²) a partir de uma planilha do excel.
