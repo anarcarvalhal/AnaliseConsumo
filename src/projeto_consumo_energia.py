@@ -1,19 +1,16 @@
 """
 Projeto: Simulador de Consumo e Energia Solar
 Alunos: Ana Ruth e Douglas
-Data: 
+Data: 24/04/2025
 Descrição: Este programa coleta dados mensais de consumo de energia (kWh e R$) e fornece análises úteis para 
 estimar a viabilidade de instalação de um sistema fotovoltaico.
 """
-
-# =======================================================================================
-# IMPORTAÇÃO DAS BIBLIOTECAS NECESSÁRIAS 
-# =======================================================================================
+# >> IMPORTAÇÃO DAS BIBLIOTECAS NECESSÁRIAS 
 import matplotlib.pyplot as plt  # Biblioteca para gerar gráficos
 import pandas as pd   # Biblioteca para manipular dados
 
 # =======================================================================================
-# CONFIGURAÇÕES DO SISTEMA SOLAR - EDITAR CONFORME SUA PLACA
+# CONFIGURAÇÕES DO SISTEMA SOLAR E DE TARIFAS - EDITÁVEL PELO USUÁRIO
 # =======================================================================================
 area_painel = 10.0       # Área de um painel
 quantidade_de_paineis = 1  
@@ -22,23 +19,18 @@ area_painel_m2 = area_painel * quantidade_de_paineis   # Área total em m² do(s
 eficiencia_painel = 0.18   # Eficiência dos painéis (em decimal: 18% = 0.18)
 perda_sistema = 0.17      # Perdas do sistema (cerca de 17%, ou seja, usa-se 83% de rendimento)
 
-# =======================================================================================
-# CONFIGURAÇÕES DE TARIFA - EDITAR CONFORME SUA CONTA
-# =======================================================================================
 tarifa_te = 0.35921    # Tarifa de Energia (R$/kWh)
 tarifa_tusd = 0.76273   # Tarifa de Distribuição (R$/kWh)
 
-# =======================================================================================
-# CAMINHO DO ARQUIVO EXCEL COM OS DADOS DE IRRADIAÇÃO
-# =======================================================================================
+# >> CAMINHO DO ARQUIVO EXCEL COM OS DADOS DE IRRADIAÇÃO
 caminho_arquivo = "Irradiacao_Itaperuna.xlsx"
 
-# **Variável global para o custo médio por kWh
+# =======================================================================================
+# PARÂMETROS AUXILIARES:
+# =======================================================================================
+# >> Variável global para o custo médio por kWh
 custo_medio_kwh = 0.00
-
-# =======================================================================================
-# DICIONÁRIO DE DIAS POR MÊS (para converter Wh/m²/dia para Wh/m²/mês)
-# =======================================================================================
+# >> Dicionário de dias por mês (para converter Wh/m²/dia para Wh/m²/mês:
 dias_por_mes = {
     'Jan': 31, 'Feb': 28, 'Mar': 31, 'Apr': 30, 'May': 31, 'Jun': 30, 'Jul': 31,
     'Aug': 31, 'Sep': 30, 'Oct': 31, 'Nov': 30, 'Dec': 31
