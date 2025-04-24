@@ -18,7 +18,7 @@ Calculamos a média diária mensal sobre esses 21 pontos para obter um valor rep
   Estima o valor da fatura mensal média com base nas tarifas TE e TUSD.
 
 - Análise de Consumo
-  Identifica meses de maior e de menor consumo, calculaa consumo médio e valor médio de conta.
+  Identifica meses de maior e de menor consumo, calcula consumo médio e valor médio de conta.
 
 - Simulação de Geração Solar
   Calcula geração mensal de energia solar realista considerando a área de painéis, eficiência e perdas do sistema.
