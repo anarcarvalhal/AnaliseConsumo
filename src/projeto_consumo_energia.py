@@ -23,6 +23,9 @@ tarifa_te = 0.35921    # Tarifa de Energia (R$/kWh)
 tarifa_tusd = 0.76273   # Tarifa de Distribuição (R$/kWh)
 
 # >> CAMINHO DO ARQUIVO EXCEL COM OS DADOS DE IRRADIAÇÃO
+# Dados de irradiação (LABREN/INPE, 2017 - Itaperuna-RJ)
+# Média anual: 4.9 kWh/m²/dia (cenário conservador)
+# Valores recentes (2020-2023) podem ser ~10% superiores
 caminho_arquivo = "Irradiacao_Itaperuna.xlsx"
 
 # =======================================================================================
